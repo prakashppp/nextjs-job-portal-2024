@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 
 const connectToDB = async () => {
-  const connectionURL = process.env.MONGODB_URL;
+  const connectionURL = "mongodb://localhost:27017";
 
   mongoose
     .connect(connectionURL)
