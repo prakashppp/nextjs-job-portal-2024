@@ -38,6 +38,8 @@ export const candidateOnboardFormControls = [
     name: "name",
     placeholder: "Enter your name",
     componentType: "input",
+    // disabled:true,
+    // defaultValue: 'default name'
   },
   {
     label: "Current Company",
