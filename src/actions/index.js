@@ -40,7 +40,7 @@ export async function fetchJobsForRecruiterAction(id) {
   const result = await Job.find({ recruiterId: id });
 
   return JSON.parse(JSON.stringify(result));
-}
+ }
 //candidate
 export async function fetchJobsForCandidateAction(filterParams = {}) {
   await connectToDB();

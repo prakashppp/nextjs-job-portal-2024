@@ -56,6 +56,30 @@ function CommonForm({
 
         break;
 
+        // case "select":
+        //   content = (
+        //     <div className="relative flex items-center mt-8">
+        //       <select
+        //         name={getCurrentControl.name}
+        //         value={formData[getCurrentControl.name]}
+        //         onChange={(event) =>
+        //           setFormData({
+        //             ...formData,
+        //             [event.target.name]: event.target.value,
+        //           })
+        //         }
+        //         className="w-full rounded-md h-[60px] px-4 border dark:bg-black bg-gray-100 text-lg outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:drop-shadow-lg focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+        //       >
+        //         {getCurrentControl.options.map((option) => (
+        //           <option key={option.value} value={option.value}>
+        //             {option.label}
+        //           </option>
+        //         ))}
+        //       </select>
+        //     </div>
+        //   );
+        //   break;
+
       default:
         content = (
           <div className="relative flex items-center mt-8">

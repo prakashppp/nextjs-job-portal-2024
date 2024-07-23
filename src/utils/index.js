@@ -19,6 +19,16 @@ export const recruiterOnboardFormControls = [
     placeholder: "Enter your company role",
     componentType: "input",
   },
+  // {
+  //   label: "Office Location",
+  //   name: "officeLocation",
+  //   componentType: "select",
+  //   options: [
+  //     { label: "New York", value: "new-york" },
+  //     { label: "San Francisco", value: "san-francisco" },
+  //     { label: "Remote", value: "remote" },
+  //   ],
+  // },
 ];
 
 export const initialRecruiterFormData = {
