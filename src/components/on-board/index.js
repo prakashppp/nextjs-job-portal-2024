@@ -13,9 +13,19 @@ import { useUser } from "@clerk/nextjs";
 import { createProfileAction } from "@/actions";
 import { createClient } from "@supabase/supabase-js";
 
+// const supabaseClient = createClient(
+//   "https://ymsijpnegskkoiuerthi.supabase.co",
+//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inltc2lqcG5lZ3Nra29pdWVydGhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQyMzYzNDYsImV4cCI6MjAyOTgxMjM0Nn0.PM7Nr9qTZFEJsf62eHgkFXKGPqt0gfMdFN6SOJjCP6M"
+// );
+
+
+// NEXT_PUBLIC_SUPABASE_URL=https://carjnrorfvojnshpeilc.supabase.co
+// NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhcmpucm9yZnZvam5zaHBlaWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE4MDM1OTEsImV4cCI6MjAzNzM3OTU5MX0.ayF9DIXjG7cMv9PkiNUI8j_PgD1Yx6u94-M20uPlItc            
+
+//mine
 const supabaseClient = createClient(
-  "https://ymsijpnegskkoiuerthi.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inltc2lqcG5lZ3Nra29pdWVydGhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQyMzYzNDYsImV4cCI6MjAyOTgxMjM0Nn0.PM7Nr9qTZFEJsf62eHgkFXKGPqt0gfMdFN6SOJjCP6M"
+  "https://carjnrorfvojnshpeilc.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhcmpucm9yZnZvam5zaHBlaWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE4MDM1OTEsImV4cCI6MjAzNzM3OTU5MX0.ayF9DIXjG7cMv9PkiNUI8j_PgD1Yx6u94-M20uPlItc "
 );
 
 function OnBoard() {
@@ -38,18 +48,19 @@ function OnBoard() {
 
   async function handleUploadPdfToSupabase() {
     const { data, error } = await supabaseClient.storage
-      .from("job-board-public")
+      .from("job-board-pp")
       .upload(`/public/${file.name}`, file, {
         cacheControl: "3600",
         upsert: false,
       });
     console.log(data, error);
     if (data) {
+      console.log('resume path',data.path)
       setCandidateFormData({
         ...candidateFormData,
         resume: data.path,
       });
-    }
+    } 
   }
 
   console.log(candidateFormData);
