@@ -25,7 +25,7 @@ import { createClient } from "@supabase/supabase-js";
 //mine
 const supabaseClient = createClient(
   "https://carjnrorfvojnshpeilc.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhcmpucm9yZnZvam5zaHBlaWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE4MDM1OTEsImV4cCI6MjAzNzM3OTU5MX0.ayF9DIXjG7cMv9PkiNUI8j_PgD1Yx6u94-M20uPlItc "
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNhcmpucm9yZnZvam5zaHBlaWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE4MDM1OTEsImV4cCI6MjAzNzM3OTU5MX0.ayF9DIXjG7cMv9PkiNUI8j_PgD1Yx6u94-M20uPlItc"
 );
 
 function OnBoard() {
