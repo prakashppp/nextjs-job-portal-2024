@@ -8,6 +8,7 @@ import {
   updateJobApplicationAction,
 } from "@/actions";
 import { createClient } from "@supabase/supabase-js";
+import styles from './candidate-list.module.css';
 
 const supabaseClient = createClient(
   "https://carjnrorfvojnshpeilc.supabase.co",
@@ -109,7 +110,7 @@ function CandidateList({
             <p className="text-sm font-normal dark:text-white text-black">
               {currentCandidateDetails?.candidateInfo?.currentJobLocation}
             </p>
-            <p className="dark:text-white">
+            <p className={styles.dummy}>
               Total Experience:
               {currentCandidateDetails?.candidateInfo?.totalExperience} Years
             </p>
